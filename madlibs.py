@@ -50,7 +50,15 @@ def show_madlib_form():
         return render_template("game.html")
     else:
         return render_template("goodbye.html")
-    
+
+@app.route('/madlib')
+def show_madlib():
+    person= request.args.get('name')
+    color=request.args.get('color')
+    adjective=request.args.get('adjective')
+    noun=request.args.get('noun')
+
+    return render_template('madlib.html', person=person, color=color, adjective=adjective, noun=noun)
 
 
 if __name__ == '__main__':
