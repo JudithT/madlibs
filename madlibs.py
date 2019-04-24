@@ -53,13 +53,19 @@ def show_madlib_form():
 
 @app.route('/madlib')
 def show_madlib():
+    friends =[]
+    #madlib_options = ['madlib.html', 'madlib2.html', 'madlib3.html']
     person= request.args.get('name')
     color=request.args.get('color')
     adjective=request.args.get('adjective')
     noun=request.args.get('noun')
+    friends.append(request.args.get('friends'))
+    friends.append(request.args.get('friends1'))
+    friends.append(request.args.get('friends2'))
+    print(friends)
 
-    return render_template('madlib.html', person=person, color=color, adjective=adjective, noun=noun)
-
+    return render_template('madlib.html', person=person, color=color, adjective=adjective, noun=noun, friends = friends)
+    #return render_template(choice(madlib_options),person=person, color=color, adjective=adjective, noun=noun, friends=friends)
 
 if __name__ == '__main__':
     # Setting debug=True gives us error messages in the browser and also

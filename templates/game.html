@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
 <head>
+  <link rel="stylesheet" href="/static/madlibs.css" type="text/css">
   <title>A Compliment</title>
 </head>
 <body>
-  <form action="/madlib" name="information">
+  <form action="/madlib">
     Enter a name:<input type="text" name="name">
     Select a color: 
       <select name="color">
@@ -21,6 +22,10 @@
         <option value="dog">Dog</option>
       </select><br>
     Enter an adjective:<input type="text" name="adjective"><br>
+    Choose Friends: 
+       <input type="checkbox" name="friends" value="dog">Dog
+       <input type="checkbox" name="friends1" value="cat">Cat
+       <input type="checkbox" name="friends2" value="armadillo">Armadillo<br>
     <input type="submit" name="submit-button">
   </form> 
    
